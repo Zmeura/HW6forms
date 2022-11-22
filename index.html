@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Homework 7</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Intake Main Flow</h1>
+      <p><span class="red-star">*</span> Mandatory field</p>
+      <form>
+        <fieldset>
+          <h2>Information</h2>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="intake-type"
+                >Intake Type <span class="red-star">*</span></label
+              >
+              <select id="intake-type" class="input-field">
+                <option value="1">Referral</option>
+                <option value="2">two</option>
+                <option value="3">three</option>
+                <option value="4">four</option>
+                <option value="5">fife</option>
+              </select>
+            </div>
+
+            <div class="form-section-column">
+              <label for="date">Enrollment Initiation Date jquery</label>
+              <input
+                id="date"
+                type="date"
+                class="input-field input-background"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="tel">phone</label>
+              <input
+                type="tel"
+                id="tel"
+                class="input-field"
+                value="+380"
+                required
+              />
+            </div>
+
+            <div class="form-section-column">
+              <label for="app-category"
+                >Application Category<span class="red-star">*</span></label
+              >
+              <select type="text" id="app-category" class="input-field">
+                <option value="1">Child Support</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="email">email</label>
+              <input
+                id="email"
+                type="email"
+                class="input-field"
+                placeholder="yourmail@gmail.com"
+              />
+            </div>
+
+            <div class="form-section-column">
+              <label for="enroll-date"
+                >Enrollment Submission Date
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="date"
+                id="enroll-date"
+                class="input-field input-background"
+              />
+            </div>
+          </div>
+          <div class="form-section-column">
+            <label for="app-reg"
+              >Application Registration
+              <span class="optional-note">(Optional)</span></label
+            >
+            <input
+              type="text"
+              id="app-reg"
+              class="input-field input-right-arrow"
+              value="APP0000116"
+            />
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="additional-date"
+                >Additional Information Requested Date
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input type="date" id="additional-date" class="input-field" />
+            </div>
+
+            <div class="checkbox-column2 purged">
+              <input type="checkbox" id="purged" class="checkbox-input" />
+              <label for="purged" class="checkbox-label">Purged</label>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="remaining-days"
+                >Remaining Days Before Referral is Purged
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="number"
+                min="0"
+                id="remaining-days"
+                class="input-field"
+                value="13"
+              />
+            </div>
+
+            <div class="form-section-column">
+              <label for="paternity"
+                >Exempt from Paternity
+                <span class="optional-note">(Optional)</span></label
+              >
+              <select id="paternity" class="input-field">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="fee-date"
+                >Fee Payment Date
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input type="date" id="fee-date" class="input-field" />
+            </div>
+
+            <div class="form-section-column">
+              <label for="enrollment-status"
+                >Enrollment Status
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="text"
+                id="enrollment-status"
+                class="input-field input-right-arrow"
+                value="Worklisted"
+              />
+            </div>
+          </div>
+          <div class="checkbox-column">
+            <input type="checkbox" id="app-fee" class="checkbox-input" />
+            <label for="app-fee" class="checkbox-label"
+              >Application Fee Processed</label
+            >
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <h2>Maternity Information</h2>
+          <div class="form-section">
+            <div class="checkbox-column">
+              <input
+                type="checkbox"
+                id="child-support"
+                class="checkbox-input"
+              />
+              <label for="child-support" class="checkbox-label"
+                >Are you requesting child support services for an unborn
+                child?</label
+              >
+            </div>
+
+            <div class="form-section-column">
+              <label for="biological-parent"
+                >Other known biological parent<span class="optional-note"
+                  >(Optional)</span
+                ></label
+              >
+              <input
+                type="text"
+                id="biological-parent"
+                class="input-field input-right-arrow"
+                value="None"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <h2>Official Use</h2>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="case-cat">Case Category</label>
+              <select id="case-cat" class="input-field">
+                <option value="iv-a">Active IV-A</option>
+                <option value="iv-b">Active IV-B</option>
+                <option value="iv-b">Active IV-C</option>
+              </select>
+            </div>
+            <div class="form-section-column">
+              <label for="indicator"
+                >IV-D Indicator<span class="red-star">*</span></label
+              >
+              <input
+                type="text"
+                class="input-field input-right-arrow"
+                value="Non-IV-D"
+                id="indicator"
+              />
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="arrears"
+                >Arrears Only Indicator
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="text"
+                id="arrears"
+                class="input-field input-right-arrow"
+                placeholder="None"
+              />
+            </div>
+
+            <div class="form-section-column">
+              <label for="intergover-cat"
+                >Intergovernmental Case Category
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="text"
+                id="intergover-cat"
+                class="input-field input-right-arrow"
+                placeholder="None"
+              />
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="county"
+                >Assigned County of Ownership
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="text"
+                id="county"
+                class="input-field input-right-arrow"
+                placeholder="None"
+              />
+            </div>
+
+            <div class="form-section-column">
+              <label for="intergover-type"
+                >Intergovernmental Case Type
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="text"
+                id="intergover-type"
+                class="input-field input-right-arrow"
+                placeholder="None"
+              />
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="status"
+                >Intergovernmental Case Status
+                <span class="optional-note">(Details)</span></label
+              >
+              <input
+                type="details"
+                id="status"
+                class="input-field input-right-arrow"
+                placeholder="None"
+              />
+            </div>
+
+            <div class="form-section-column">
+              <label for="case-num">Case Number</label>
+              <input
+                type="search"
+                id="case-num"
+                class="input-field input-right-search"
+                placeholder="Search Case Number"
+              />
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="indicator"
+                >Special Handling Indicator for Applicant
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="details"
+                id="indicator"
+                class="input-field input-right-arrow"
+                placeholder="None"
+              />
+            </div>
+
+            <div class="form-section-column">
+              <label for="ref-num">Referral Number</label>
+              <input
+                type="search"
+                id="ref-num"
+                class="input-field input-right-search"
+                placeholder="Search Referral Number"
+              />
+            </div>
+          </div>
+          <div class="form-section-column">
+            <label for="other-parent-indicator"
+              >Special Handling Indicator for Other Parent
+              <span class="optional-note">(Optional)</span></label
+            >
+            <input
+              type="text"
+              id="other-parent-indicator"
+              class="input-field input-right-arrow"
+              placeholder="None"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <h2>System Information</h2>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="user-enroll">Enrollment Taken by User</label>
+              <input
+                type="search"
+                id="user-enroll"
+                class="input-field input-right-search"
+                value="Search Input"
+              />
+            </div>
+
+            <div class="form-section-column">
+              <label for="intake-supervisor"
+                >Intake Supervisor
+                <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="search"
+                id="intake-supervisor"
+                class="input-field input-right-search"
+                placeholder="Search"
+              />
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-column">
+              <label for="worker"
+                >Worker <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="search"
+                id="worker"
+                class="input-field input-right-search"
+                value="Search Input"
+              />
+            </div>
+
+            <div class="form-section-column">
+              <label for="owner"
+                >Owner <span class="optional-note">(Optional)</span></label
+              >
+              <input
+                type="search"
+                id="owner"
+                class="input-field input-right-search"
+                value="Rajaneesh Banal"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="btn-div">
+          <button class="btn" value="Next">Next</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
